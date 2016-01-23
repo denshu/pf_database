@@ -1,0 +1,17 @@
+028	Mikael	M	Alerian Federation	Crimeo	Test Description	img/Mikael.gif	img/Mikael.png
+029	Elli	F	Alerian Federation	Crimeo	Test Description	img/Elli.gif	img/Elli.png
+030	Koren	M	Alerian Federation	Crimeo	Test Description	img/Koren.gif	img/Koren.png
+031	Shiel	M	Alerian Federation	Crimeo Outskirts	Test Description	img/Shiel.gif	img/Shiel.png
+032	Angelo	M	Alerian Federation	Rodo	Test Description	img/Angelo.gif	img/Angelo.png
+033	Caldwell	M	Alerian Federation	La Celle	Test Description	img/Caldwell.gif	img/Caldwell.png
+034	Lirada	F	Alerian Federation	La Celle	Test Description	img/Lirada.gif	img/Lirada.png
+035	Sergei	M	Alerian Federation	La Celle	Test Description	img/Sergei.gif	img/Sergei.png
+036	Alister Thanos	M	Gran Eszak Empire	New Eszak	Test Description	img/Alister.gif	img/Alister.png
+037	Demetrius Thanos	M	Gran Eszak Empire	New Eszak	Test Description	img/Demetrius.gif	img/Demetrius.png
+038	Godel	M	Gran Eszak Empire	New Eszak	Test Description	img/Godel.gif	img/Godel.png
+039	Agnes	F	Nansei Allied Union	Alren	Test Description	img/Agnes.gif	img/Agnes.png
+040	Odem	M	???	???	Test Description	img/Odem.gif	img/Odem.png
+041	Reeve	M	Neutral Territory	Fort Walhall	Test Description	img/Reeve.gif	img/Reeve.png
+042	Van	M	Neutral Territory	Fort Walhall	Test Description	img/Van.gif	img/Van.png
+043	Randoen	M	Neutral Territory	Fort Walhall	Test Description	img/Randoen.gif	img/Randoen.png
+044	Lily	F	Gran Eszak Empire	Mt. Vaalbar	Test Description	img/Lily.gif	img/Lily.png

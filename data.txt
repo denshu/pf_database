@@ -1,0 +1,27 @@
+001	D.J.	M	Alerian Federation	Crimeo	C	B	C	C	B	A	Test Description	img/DJ.gif	img/DJ.png
+002	Matt	M	Alerian Federation	La Celle	D	B	C	B	A	C	Test Description	img/Matt.gif	img/Matt.png
+003	Sam	M	Alerian Federation	Rodo	B	D	B	C	C	C	Test Description	img/Sam.gif	img/Sam.png
+004	Jeremy	M	Gran Eszak Empire	New Eszak	C	C	B	C	D	D	Test Description	img/Jeremy.gif	img/Jeremy.png
+005	Timmy	M	Gran Eszak Empire	New Eszak	C	D	B	B	B	D	Test Description	img/Timmy.gif	img/Timmy.png
+006	Gerome	M	Gran Eszak Empire	New Eszak	B	D	B	S	C	D	Test Description	img/Gerome.gif	img/Gerome.png
+007	John Michael	M	Nansei Allied Union	Kinoshita Forests	B	E	A	B	A	D	Test Description	img/John.gif	img/John.png
+008	Jonny	M	Nansei Allied Union	Saika	C	C	C	C	C	B	Test Description	img/Jonny.gif	img/Jonny.png
+009	Cecilia	F	Alerian Federation	Crimeo	D	C	C	C	A	D	Test Description	img/Cecilia.gif	img/Cecilia.png
+010	Grant	M	Alerian Federation	Crimeo	B	E	B	D	D	D	Test Description	img/Grant.gif	img/Grant.png
+011	Joanna	F	Alerian Federation	Crimeo	D	D	C	A	A	C	Test Description	img/Joanna.gif	img/Joanna.png
+012	Fernando Miguel Dominguez III	M	Alerian Federation	Crimeo	B	B	B	C	C	C	Test Description	img/Fernando.gif	img/Fernando.png
+013	Lazuli	F	Alerian Federation	La Celle	D	A	D	A	C	B	Test Description	img/Lazuli.gif	img/Lazuli.png
+014	Giovanni	M	Alerian Federation	Rodo	A	C	B	D	C	D	Test Description	img/Giovanni.gif	img/Giovanni.png
+015	Gilbert Thanos	M	Gran Eszak Empire	New Eszak	C	B	B	D	C	B	Test Description	img/Gilbert.gif	img/Gilbert.png
+016	Olivia	F	Gran Eszak Empire	New Eszak	E	B	A	C	A	B	Test Description	img/Olivia.gif	img/Olivia.png
+017	Hayate Takeda	M	Nansei Allied Union	Morikaizen	C	A	D	C	C	B	Test Description	img/Hayate.gif	img/Hayate.png
+018	Taro Takeda	M	Nansei Allied Union	Morikaizen	B	E	C	B	B	C	Test Description	img/Taro.gif	img/Taro.png
+019	Dennis	M	Nansei Allied Union	Alren	D	A	D	B	C	A	Test Description	img/Dennis.gif	img/Dennis.png
+020	Gregor	M	Nansei Allied Union	Alren	B	C	B	D	D	C	Test Description	img/Gregor.gif	img/Gregor.png
+021	Mei	F	Nansei Allied Union	Saika	C	B	B	B	B	C	Test Description	img/Mei.gif	img/Mei.png
+022	Shen	M	Nansei Allied Union	Saika	D	A	D	C	C	A	Test Description	img/Shen.gif	img/Shen.png
+023	Tsuya	M	Alerian Federation	Eleusina	D	C	B	B	B	E	Test Description	img/Tsuya.gif	img/Tsuya.png
+024	Kino	?	Alerian Federation	Eleusina	C	B	C	B	C	C	Test Description	img/Kino.gif	img/Kino.png
+025	Patria	F	Unaffiliated	The Azures	C	C	A	D	D	C	Test Description	img/Patria.gif	img/Patria.png
+026	Quinn	F	Unaffiliated	The Azures	D	B	B	C	C	C	Test Description	img/Quinn.gif	img/Quinn.png
+027	Yun	F	Unaffiliated	The Azures	D	A	D	B	C	B	Test Description	img/Yun.gif	img/Yun.png
