@@ -24,7 +24,16 @@
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
-            <li class="active"><a href="#">Characters</a></li>
+            <li class="dropdown active"> 
+            	<a id="dropdown-characters" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> 
+            	Characters <span class="caret"></span></a> 
+        		<ul class="dropdown-menu" aria-labelledby="dropdown-characters"> 
+        		<li class="active"><a href="#">Playable Characters</a></li> 
+        		<li><a href="#">Antagonists and NPCs</a></li> 
+        		<li><a href="#">Statistics</a></li> 
+        		<li><a href="#">Compare Character Stats</a></li> 
+        		</ul>
+    		</li>
             <li><a href="#">Locations</a></li>
             <li><a href="#">About</a></li>
           </ul>
@@ -66,12 +75,7 @@
 				      		
 							  	<?php
 
-								$con = mysqli_connect("localhost","root","DSFARGEG","pf_database");
-
-								if (mysqli_connect_errno())
-								  {
-								  echo "Failed to connect to MySQL: " . mysqli_connect_error();
-								  }
+								require_once('config.php');
 
 								// Selecting by gender
 								echo '<div class="form-group"><label for="select-gender">Gender</label><select class="form-control" id="select-gender"><option></option>';
@@ -107,17 +111,16 @@
 								echo '</select></div>';
 
 								mysqli_free_result($result);
-									mysqli_close($con);
 								?>
 								<!-- Sorting method -->
 								<div class="form-group"><label for="sort-by">Sort By</label><select class="form-control" id="sort-by">
-								<option>Name</option>
-								<option>HP</option>
-								<option>SP</option>
-								<option>STR</option>
-								<option>DEX</option>
-								<option>AGI</option>
-								<option>INT</option>
+								<option>name</option>
+								<option>hp_rating</option>
+								<option>sp_rating</option>
+								<option>str_rating</option>
+								<option>dex_rating</option>
+								<option>agi_rating</option>
+								<option>int_rating</option>
 								</select></div>
 
 								<button type="button" class="btn btn-default btn-lg" id="search-button">
@@ -131,37 +134,29 @@
 			</div>
 
 			<!-- Creating the grid of characters -->
+			<div id="character-grid-container">
 			<div class="character-grid">
-<?php
-
-	$con = mysqli_connect("localhost","root","DSFARGEG","pf_database");
-
-	if (mysqli_connect_errno())
-	  {
-	  echo "Failed to connect to MySQL: " . mysqli_connect_error();
-	  }
-
-	$selection = "SELECT name,static_sprite FROM characters";
-	$result = mysqli_query($con,$selection);
-	
-	do {
-		echo '<div class="row">';
-		for ($x = 0; $x <= 3; $x++) {
-			$row = mysqli_fetch_array($result,MYSQLI_ASSOC);
-			if ($row != NULL) {
-				echo '<div class="col-md-3 character" style="text-align:center" data-toggle="modal" data-target="#characterDetails">';
-				echo '<h4>',$row["name"],'</h4>';
-				echo '<img src="',$row["static_sprite"],'" />';
-				echo '</div>';
-			}
-		}
-		echo '</div>';
-	} while($row != NULL);
-	
-	mysqli_free_result($result);
-	mysqli_close($con);
-?>
-			</div>
+			<?php
+				$selection = "SELECT name,static_sprite FROM characters ORDER BY name";
+				$result = mysqli_query($con,$selection);
+				
+				do {
+					echo '<div class="row">';
+					for ($x = 0; $x <= 3; $x++) {
+						$row = mysqli_fetch_array($result,MYSQLI_ASSOC);
+						if ($row != NULL) {
+							echo '<div class="col-xs-3 character" style="text-align:center" data-toggle="modal" data-target="#characterDetails">';
+							echo '<h4 value="',$row["name"],'">',$row["name"],'</h4>';
+							echo '<img src="',$row["static_sprite"],'" />';
+							echo '</div>';
+						}
+					}
+					echo '</div>';
+				} while($row != NULL);
+				
+				mysqli_free_result($result);
+			?>
+			</div></div>
 		</div>
 		</div>
 		</div>
@@ -173,14 +168,11 @@
 		    <div class="modal-content">
 		      <div class="modal-header">
 		        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-
-
-
-		        <h3 class="modal-title" id="characterDetailsLabel"></h3>
+		        <h2 class="modal-title" id="characterDetailsLabel"></h2>
 		      </div>
 		      <div class="modal-body" id="character-detail-body"></div>
 
-
+		      <!-- Inserting modal content -->
 
 		      <div class="modal-footer">
 		        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -201,7 +193,7 @@
 		// $('.character').addClass('in');
 		$('.character').each(function(index) {
 			//$(this).addClass('in');
-			$(this).delay(250*index).queue(function() { $(this).addClass('in').dequeue(); });
+			$(this).delay(150*index).queue(function() { $(this).addClass('in').dequeue(); });
 
 		});
 

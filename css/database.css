@@ -95,10 +95,10 @@ body {
 }
 .character {
   opacity: 0;
-    -webkit-transition: opacity 0.5s ease-in-out;
-    -moz-transition: opacity 0.5s ease-in-out;
-    -o-transition: opacity 0.5s ease-in-out;
-    transition: opacity 0.5s ease-in-out;
+    -webkit-transition: opacity 0.4s ease-in-out;
+    -moz-transition: opacity 0.4s ease-in-out;
+    -o-transition: opacity 0.4s ease-in-out;
+    transition: opacity 0.4s ease-in-out;
   padding-bottom: 15px;
   background-color: rgba(86,61,124,.15);
   border: 1px solid #ddd;
@@ -111,4 +111,37 @@ body {
 
 .in {
     opacity: 1;
+}
+
+/* modal alignment */
+
+.vertical-alignment-helper {
+    display:table;
+    height: 100%;
+    width: 100%;
+    pointer-events:none; /* This makes sure that we can still click outside of the modal to close it */
+}
+.vertical-align-center {
+    /* To center vertically */
+    display: table-cell;
+    vertical-align: middle;
+    pointer-events:none;
+}
+.modal-content {
+    /* Bootstrap sets the size of the modal in the modal-dialog class, we need to inherit it */
+    width:inherit;
+    height:inherit;
+    /* To center horizontally */
+    margin: 0 auto;
+    pointer-events: all;
+}
+
+#character-modal-asl {
+  font-size: 12pt;
+  font-style: italic;
+  text-align: right;
+}
+
+#character-modal-sprite {
+  text-align: center;
 }
