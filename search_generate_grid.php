@@ -27,6 +27,9 @@ if ($gender == '' && $nation !== '' && $location == '')
 
 if ($gender == '' && $nation == '' && $location !== '')
     $selection = 'SELECT name,static_sprite FROM characters WHERE location = "'.$location.'" ORDER BY '.$sort;
+
+if ($gender == '' && $nation == '' && $location == '')
+    $selection = 'SELECT name,static_sprite FROM characters ORDER BY '.$sort;
    
 //$selection = 'SELECT name,static_sprite FROM characters WHERE gender = "'.$gender.'" ORDER BY '.$sort;   
 $result = mysqli_query($con,$selection);
@@ -37,7 +40,7 @@ do {
     for ($x = 0; $x <= 3; $x++) {
         $row = mysqli_fetch_array($result,MYSQLI_ASSOC);
         if ($row != NULL) {
-            echo '<div class="col-md-3 character" style="text-align:center" data-toggle="modal" data-target="#characterDetails">';
+            echo '<div class="col-xs-3 character character-playable" style="text-align:center" data-toggle="modal" data-target="#characterDetails">';
             echo '<h4 value="',$row["name"],'">',$row["name"],'</h4>';
             echo '<img src="',$row["static_sprite"],'" />';
             echo '</div>';

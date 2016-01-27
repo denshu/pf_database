@@ -28,14 +28,14 @@
             	<a id="dropdown-characters" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> 
             	Characters <span class="caret"></span></a> 
         		<ul class="dropdown-menu" aria-labelledby="dropdown-characters"> 
-        		<li class="active"><a href="#">Playable Characters</a></li> 
-        		<li><a href="#">Antagonists and NPCs</a></li> 
-        		<li><a href="#">Statistics</a></li> 
-        		<li><a href="#">Compare Character Stats</a></li> 
+        		<li id="navbar-playable" class="active"><a href="#">Playable Characters</a></li> 
+        		<li id="navbar-npcs"><a href="#">Antagonists and NPCs</a></li> 
+        		<li id="navbar-statistics"><a href="#">Statistics</a></li> 
+        		<li id="navbar-compare"><a href="#">Compare Characters</a></li> 
         		</ul>
     		</li>
-            <li><a href="#">Locations</a></li>
-            <li><a href="#">About</a></li>
+            <li id="navbar-locations"><a href="#">Locations</a></li>
+            <li id="navbar-about"><a href="#">About</a></li>
           </ul>
         </div>
       </div>
@@ -46,10 +46,10 @@
       <div class="row">
         <div class="col-sm-3 col-md-2 sidebar">
           <ul class="nav nav-sidebar">
-            <li class="active"><a href="#">Playable Characters <span class="sr-only">(current)</span></a></li>
-            <li><a href="#">Antagonists and NPCs</a></li>
-            <li><a href="#">Statistics</a></li>
-            <li><a href="#">Compare Character Stats</a></li>
+            <li id="sidebar-playable" class="active"><a href="#">Playable Characters <span class="sr-only">(current)</span></a></li>
+            <li id="sidebar-npcs"><a href="#">Antagonists and NPCs</a></li>
+            <li id="sidebar-statistics"><a href="#">Statistics</a></li>
+            <li id="sidebar-compare"><a href="#">Compare Characters</a></li>
           </ul>
         </div>
 
@@ -66,7 +66,7 @@
 				    <div class="panel-heading" role="tab" id="headingOne">
 				      <h3 class="panel-title">
 				        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-				          Refine Search
+				          Search
 				        </a>
 				      </h3>
 				    </div>
@@ -111,6 +111,8 @@
 								echo '</select></div>';
 
 								mysqli_free_result($result);
+								mysqli_free_result($result2);
+								mysqli_free_result($result3);
 								?>
 								<!-- Sorting method -->
 								<div class="form-group"><label for="sort-by">Sort By</label><select class="form-control" id="sort-by">
@@ -145,7 +147,7 @@
 					for ($x = 0; $x <= 3; $x++) {
 						$row = mysqli_fetch_array($result,MYSQLI_ASSOC);
 						if ($row != NULL) {
-							echo '<div class="col-xs-3 character" style="text-align:center" data-toggle="modal" data-target="#characterDetails">';
+							echo '<div class="col-xs-3 character character-playable" style="text-align:center" data-toggle="modal" data-target="#characterDetails">';
 							echo '<h4 value="',$row["name"],'">',$row["name"],'</h4>';
 							echo '<img src="',$row["static_sprite"],'" />';
 							echo '</div>';
@@ -190,10 +192,8 @@
 
     <script>
 	$(window).on("load", function() {
-		// $('.character').addClass('in');
 		$('.character').each(function(index) {
-			//$(this).addClass('in');
-			$(this).delay(150*index).queue(function() { $(this).addClass('in').dequeue(); });
+			$(this).delay(120*index).queue(function() { $(this).addClass('in').dequeue(); });
 
 		});
 

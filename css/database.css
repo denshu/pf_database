@@ -95,10 +95,10 @@ body {
 }
 .character {
   opacity: 0;
-    -webkit-transition: opacity 0.4s ease-in-out;
-    -moz-transition: opacity 0.4s ease-in-out;
-    -o-transition: opacity 0.4s ease-in-out;
-    transition: opacity 0.4s ease-in-out;
+    -webkit-transition: opacity 0.3s ease-in-out;
+    -moz-transition: opacity 0.3s ease-in-out;
+    -o-transition: opacity 0.3s ease-in-out;
+    transition: opacity 0.3s ease-in-out;
   padding-bottom: 15px;
   background-color: rgba(86,61,124,.15);
   border: 1px solid #ddd;
@@ -137,11 +137,55 @@ body {
 }
 
 #character-modal-asl {
-  font-size: 12pt;
+  font-size: 14pt;
   font-style: italic;
   text-align: right;
+  
 }
 
 #character-modal-sprite {
   text-align: center;
+}
+
+#character-modal-firstrow {
+  margin-bottom: 0px;
+}
+
+#character-modal-secondrow {
+  margin-bottom: 0px;
+}
+
+#svgcol {
+    margin: 0 auto;
+    width: 50%;
+    height: 230px;
+}
+
+#character-modal-backing-hex {
+  position: relative;
+}
+
+[value="Alerian Federation"] {
+  color: #313cce;
+}
+
+[value="Gran Eszak Empire"] {
+  color: #CC0000;
+}
+
+[value="Nansei Allied Union"] {
+  color: green;
+}
+
+[value="Unaffiliated"] {
+  color: gray;
+}
+
+.characterModule {
+}
+
+.npcModule {
+}
+
+.moduleIn {
 }
