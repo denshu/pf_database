@@ -30,12 +30,12 @@
         		<ul class="dropdown-menu" aria-labelledby="dropdown-characters"> 
         		<li id="navbar-playable" class="active"><a href="#">Playable Characters</a></li> 
         		<li id="navbar-npcs"><a href="#">Antagonists and NPCs</a></li> 
-        		<li id="navbar-statistics"><a href="#">Statistics</a></li> 
-        		<li id="navbar-compare"><a href="#">Compare Characters</a></li> 
+        		<li id="navbar-statistics"><a href="#">Statistics (coming soon!)</a></li> 
+        		<li id="navbar-compare"><a href="#">Compare Characters (coming soon!)</a></li> 
         		</ul>
     		</li>
-            <li id="navbar-locations"><a href="#">Locations</a></li>
-            <li id="navbar-about"><a href="#">About</a></li>
+            <li id="navbar-locations"><a href="#">Locations (coming soon!)</a></li>
+            <li id="navbar-about" data-toggle="modal" data-target="#about-modal"><a href="#">About</a></li>
           </ul>
         </div>
       </div>
@@ -48,8 +48,8 @@
           <ul class="nav nav-sidebar">
             <li id="sidebar-playable" class="active"><a href="#">Playable Characters <span class="sr-only">(current)</span></a></li>
             <li id="sidebar-npcs"><a href="#">Antagonists and NPCs</a></li>
-            <li id="sidebar-statistics"><a href="#">Statistics</a></li>
-            <li id="sidebar-compare"><a href="#">Compare Characters</a></li>
+            <li id="sidebar-statistics"><a href="#">Statistics (coming soon!)</a></li>
+            <li id="sidebar-compare"><a href="#">Compare Characters (coming soon!)</a></li>
           </ul>
         </div>
 
@@ -163,7 +163,7 @@
 		</div>
 		</div>
 
-		<!-- Modal -->
+		<!-- Modal for character stats -->
 		<div class="modal fade" id="characterDetails" tabindex="-1" role="dialog" aria-labelledby="characterDetailsLabel">
 		  <div class="vertical-alignment-helper">
 		  <div class="modal-dialog vertical-align-center" role="document">
@@ -176,6 +176,38 @@
 
 		      <!-- Inserting modal content -->
 
+		      <div class="modal-footer">
+		        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+		      </div>
+		    </div>
+		  </div>
+		  </div>
+		</div>
+
+		<!-- Modal for About section -->
+		<div class="modal fade" id="about-modal" tabindex="-1" role="dialog" aria-labelledby="aboutLabel">
+		  <div class="vertical-alignment-helper">
+		  <div class="modal-dialog vertical-align-center modal-lg" role="document">
+		    <div class="modal-content">
+		      <div class="modal-header">
+		        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+		        <h2 class="modal-title" id="aboutLabel">About</h2>
+		      </div>
+		      <div class="modal-body" id="about-modal-body">
+		      	
+		      	<p><b>Project FLIPNOTIK</b> was a game I tried making in RPG Maker XP between 2009 and 2013. It was about eight friends, warped to 
+		      a fantasy world with their memories erased, making their way through their new surroundings to find out who they are and why they were
+		      brought to this world, while eventually playing significant roles in bringing peace to a land they once had nothing to do with. It's not
+		      very original, so my selling point was its (planned) immense depth and characterization, influenced by the Suikoden series in which
+		      each game features 108+ memorable characters banding together to confront a large-scale conflict.</p>
+		      
+		      <p>I also wrote a "prequel" novel for NaNoWriMo 2010. I never finished the game due to a myriad of things, including feature bloat, lofty
+		      aspirations, a constantly expanding universe, barely any documentation, and a messy workflow. 
+		      I don't think I'll ever be able to return to it and finish development, but at the very least it stands as a nice memory, 
+		      a chronological account of the ideas and emotions I had put into it over the years.</p>
+		      <p>Why did I make a database for an unfinished game? Because I can, I guess.</p>
+		      <p>This website was developed from scratch using HTML with SVG animations, CSS, JavaScript, jQuery, AJAX, PHP, MySQL, and the Bootstrap framework for a responsive, mobile-friendly design. I spent 4 days working on it.</p>
+		      </div>
 		      <div class="modal-footer">
 		        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
 		      </div>

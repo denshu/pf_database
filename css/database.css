@@ -189,3 +189,21 @@ body {
 
 .moduleIn {
 }
+
+#about-modal-body {
+  font-size: 12pt;
+}
+
+#character-modal-thirdrow {
+  width: 95%;
+  margin: 0px auto;
+  font-size: 12pt;
+
+}
+
+#npc-modal-thirdrow {
+  margin: 0px auto;
+  font-size: 12pt;
+  margin-top:15px;
+  width: 95%;
+}

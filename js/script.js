@@ -1,4 +1,15 @@
 $(document).on("click", "[id^=navbar-]", function() {
+    if ($(this).attr('id') == 'navbar-statistics')
+        return;
+    else if ($(this).attr('id') == 'navbar-compare')
+        return;
+    else if ($(this).attr('id') == 'navbar-locations')
+        return;
+    else if ($(this).attr('id') == 'navbar-about') {
+        
+        return;
+    }
+
     if (!($(this).hasClass('active'))) {
         $('.nav-sidebar .active').removeClass('active');
         $('.dropdown-menu .active').removeClass('active');
@@ -29,6 +40,11 @@ $(document).on("click", "[id^=navbar-]", function() {
 });
 
 $(document).on("click", "[id^=sidebar-]", function() {
+    if ($(this).attr('id') == 'sidebar-statistics')
+        return;
+    else if ($(this).attr('id') == 'sidebar-compare')
+        return;
+
     if (!($(this).hasClass('active'))) {
         $('.nav-sidebar .active').removeClass('active');
         $('.dropdown-menu .active').removeClass('active');

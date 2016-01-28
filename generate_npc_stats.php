@@ -20,15 +20,10 @@ echo '<div class="row" id="character-modal-firstrow">';
 	echo '</div>';
 echo '</div>';
 
-if ($row['nation'] == 'Alerian Federation')
-	$statcolor = '#0000CC';
-elseif ($row['nation'] ==  'Gran Eszak Empire')
-	$statcolor = '#CC0000';
-else
-	$statcolor = '#00CC00';
+echo '<div class="row" id="npc-modal-thirdrow"><p>';
+echo $row['description'];
+echo '</p></div>';
 
-echo '<div class="row">';
-	echo '<h2>Character information goes here.</h2>';
 echo '</div>';
 
 mysqli_free_result($result);

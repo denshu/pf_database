@@ -165,7 +165,14 @@ echo '<div class="row" id="character-modal-secondrow">';
 	echo '</div>';
 	echo '</div>';
 echo '</div>';
+
+echo '<div class="row" id="character-modal-thirdrow">';
+echo $row['description'];
 echo '</div>';
+
+echo '</div>';
+
+
 
 mysqli_free_result($result);
 
