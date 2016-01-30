@@ -157,10 +157,8 @@ echo '<div class="row" id="character-modal-secondrow">';
 	<line x1="2" x2="14" y1="11" y2="5" style="stroke:#777777; fill:none; stroke-width: 0.07"/>';
 
 	echo '<polygon points="8,8 8,8 8,8 8,8 8,8 8,8" style="stroke:#333333; fill:',$statcolor,'; opacity: 0.5; stroke-width: 0.1">';
-	//echo '<polygon points="0,0 0,0 0,0 0,0 0,0 0,0" style="stroke:#000000; fill:',$statcolor,'; opacity: 0.5; stroke-width: 0.1">';
 	echo '<animate id="animation" attributeName="points" attributeType="XML" to="',$hp,$sp,$str,$dex,$agi,$int,'" 
 			begin="0.1s" calcMode="spline" keyTimes="0;.9" keySplines=".42 0 .9 .9" dur=".9s" fill="freeze" /></polygon>';
-	//echo '<animate id="animate-hex" begin="0s" fill="freeze" attributeName="points" attributeType="XML" duration="1s" from="0,0 0,0 0,0 0,0 0,0 0,0" to="',$hp,$sp,$str,$dex,$agi,$int,'"/></polygon>';
 	echo '</svg>';
 	echo '</div>';
 	echo '</div>';
