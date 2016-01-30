@@ -1,36 +1,23 @@
-/*
- * Base structure
- */
+/* base structure */
 
-/* Move down content because we have a fixed navbar that is 50px tall */
 body {
   padding-top: 50px;
   font-family: 'Raleway', sans-serif;
 }
-
-
-/*
- * Global add-ons
- */
 
 .sub-header {
   padding-bottom: 10px;
   border-bottom: 1px solid #eee;
 }
 
-/*
- * Top navigation
- * Hide default border to remove 1px line.
- */
+/* top navigation */
 .navbar-fixed-top {
   border: 0;
 }
 
-/*
- * Sidebar
- */
+/* sidebar */
 
-/* Hide for mobile, show later */
+/* hide for mobile */
 .sidebar {
   display: none;
 }
@@ -44,15 +31,15 @@ body {
     display: block;
     padding: 20px;
     overflow-x: hidden;
-    overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
+    overflow-y: auto;
     background-color: #f5f5f5;
     border-right: 1px solid #eee;
   }
 }
 
-/* Sidebar navigation */
+/* sidebar navigation */
 .nav-sidebar {
-  margin-right: -21px; /* 20px padding + 1px border */
+  margin-right: -21px;
   margin-bottom: 20px;
   margin-left: -20px;
 }
@@ -68,9 +55,7 @@ body {
 }
 
 
-/*
- * Main content
- */
+/* main content */
 
 .main {
   padding: 20px;
@@ -119,19 +104,16 @@ body {
     display:table;
     height: 100%;
     width: 100%;
-    pointer-events:none; /* This makes sure that we can still click outside of the modal to close it */
+    pointer-events:none;
 }
 .vertical-align-center {
-    /* To center vertically */
     display: table-cell;
     vertical-align: middle;
     pointer-events:none;
 }
 .modal-content {
-    /* Bootstrap sets the size of the modal in the modal-dialog class, we need to inherit it */
     width:inherit;
     height:inherit;
-    /* To center horizontally */
     margin: 0 auto;
     pointer-events: all;
 }
@@ -179,15 +161,6 @@ body {
 
 [value="Unaffiliated"] {
   color: gray;
-}
-
-.characterModule {
-}
-
-.npcModule {
-}
-
-.moduleIn {
 }
 
 #about-modal-body {
