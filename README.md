@@ -13,7 +13,7 @@ Start
 
 - Base HTML is loaded through index.php. 
 - Inside, a connection is made to the MySQL database via "require_once('config.php');" and through SQL queries the dropdown menus for search refinement are populated with the unique values for each category (gender, nation, location).
-- Further down the code, SQL queries collect the data to populate the grid of characters, wrapping a <div> around each character's name and static sprite URL. Four characters per row, no matter what the size of the browser.
+- Further down the code, SQL queries collect the data to populate the grid of characters, wrapping a div around each character's name and static sprite URL. Four characters per row, no matter what the size of the browser.
 - Skeleton for modal window for character stats is created.
 - "About" modal window is created.
 - JS files are loaded.
@@ -21,7 +21,7 @@ Start
 
 Going From "Playable Characters" <-> "Antagonists and NPCs"
 
-If either the sidebar or navbar is clicked and the user isn't already viewing that page, a function is called in "script.js" that fades out and removes the main content, and uses AJAX to POST data from either "load_characters.php" or "load_npcs.php". Upon finishing the request, it appends the data to the previously empty <div> container and applies the "in" class to fade in the character grid.
+If either the sidebar or navbar is clicked and the user isn't already viewing that page, a function is called in "script.js" that fades out and removes the main content, and uses AJAX to POST data from either "load_characters.php" or "load_npcs.php". Upon finishing the request, it appends the data to the previously empty div container and applies the "in" class to fade in the character grid.
 
 Search
 
