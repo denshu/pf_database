@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<htmL>
 <head>
 	<title>Project FLIPNOTIK Database</title>
 	<meta charset="utf-8">
