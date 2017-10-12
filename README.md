@@ -31,3 +31,7 @@ When the search button is clicked, the grid of characters fades out, and either 
 ## Viewing Character Stats
 
 When a character's grid cell is clicked, the content inside '#character-detail-body' (i.e. the modal window) is emptied, and the Bootstrap framework is utilized to call said modal window. From there, an AJAX request is made to POST data from "generate_character_stats.php" or "generate_npc_stats.php", passing along the name of the character clicked as a parameter. Inside the PHP file, an SQL query is made to get the character's information -- description, animated sprite URL, and statistics. If this is a playable character, an SVG image will be created based on these statistics, representing their proficiency in things like strength, agility, etc. The data is then appended to the modal window's body.
+
+## Notes
+
+- config.php does not contain the actual MySQL login information used on the website. What do you think I am, stupid?
