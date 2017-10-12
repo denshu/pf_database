@@ -1,12 +1,9 @@
 $(document).on("click", "[id^=navbar-]", function() {
-    if ($(this).attr('id') == 'navbar-statistics')
-        return;
-    else if ($(this).attr('id') == 'navbar-compare')
+    if ($(this).attr('id') == 'navbar-compare')
         return;
     else if ($(this).attr('id') == 'navbar-locations')
         return;
     else if ($(this).attr('id') == 'navbar-about') {
-        
         return;
     }
 
@@ -28,7 +25,7 @@ $(document).on("click", "[id^=navbar-]", function() {
                 load_npcs();
             }
             else if ($clicked.attr('id') == 'navbar-statistics') {
-                $('#sidebar-npcs').addClass('active');
+                $('#sidebar-statistics').addClass('active');
                 load_statistics();
             }
             else if ($clicked.attr('id') == 'navbar-compare') {
@@ -40,9 +37,7 @@ $(document).on("click", "[id^=navbar-]", function() {
 });
 
 $(document).on("click", "[id^=sidebar-]", function() {
-    if ($(this).attr('id') == 'sidebar-statistics')
-        return;
-    else if ($(this).attr('id') == 'sidebar-compare')
+    if ($(this).attr('id') == 'sidebar-compare')
         return;
 
     if (!($(this).hasClass('active'))) {
@@ -63,7 +58,7 @@ $(document).on("click", "[id^=sidebar-]", function() {
                 load_npcs();
             }
             else if ($clicked.attr('id') == 'sidebar-statistics') {
-                $('#navbar-npcs').addClass('active');
+                $('#navbar-statistics').addClass('active');
                 load_statistics();
             }
             else if ($clicked.attr('id') == 'sidebar-compare') {
@@ -80,7 +75,7 @@ function load_characters() {
       type: 'POST',
       dataType: 'html'
     }).done(function ( data ) {
-        $('.main').append(data);
+        $('.main').hide().append(data).fadeIn(500);
         $('.characterModule').addClass('moduleIn');
         $('.character').each(function(index) {
             $(this).delay(120*index).queue(function() { $(this).addClass('in').dequeue(); });
@@ -94,7 +89,7 @@ function load_npcs() {
       type: 'POST',
       dataType: 'html'
     }).done(function ( data ) {
-        $('.main').append(data);
+        $('.main').hide().append(data).fadeIn(500);
         $('.npcModule').addClass('moduleIn');
         $('.character').each(function(index) {
             $(this).delay(120*index).queue(function() { $(this).addClass('in').dequeue(); });
@@ -103,7 +98,18 @@ function load_npcs() {
 }
 
 function load_statistics() {
-    alert('Statistics');
+    $.ajax({
+      url: 'load_statistics.php',
+      type: 'POST',
+      dataType: 'html'
+    }).done(function ( data ) {
+        $('.main').hide().append(data).fadeIn(500);
+        $('.statisticsModule').addClass('moduleIn');
+        window.generateChart();
+        $('.character').each(function(index) {
+            $(this).delay(120*index).queue(function() { $(this).addClass('in').dequeue(); });
+        });
+    });
 }
 
 function load_compare() {
@@ -111,7 +117,6 @@ function load_compare() {
 }
 
 $(document).on("click", ".character", function() {
-
     $selector = $(this).children( 'h4' ).text();
     if ($selector == 'Fernando')
         $('#characterDetailsLabel').text('Fernando Miguel Dominguez III'); 
@@ -151,17 +156,14 @@ $(document).on("click", ".character", function() {
                 $('#character-modal-gender').text('???');
         });
     }
-    
 });
 
 $(document).on("click", "#search-button", function() {
-
     $(".character-grid").fadeOut(350, function() { $(this).remove(); });
     setTimeout(populateGrid, 350);
 });
 
 $(document).on("click", "#search-button-npcs", function() {
-
     $(".character-grid").fadeOut(350, function() { $(this).remove(); });
     setTimeout(populateGridNPC, 350);
 });
