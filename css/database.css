@@ -86,7 +86,6 @@ body {
     transition: opacity 0.3s ease-in-out;
   padding-bottom: 15px;
   background-color: rgba(86,61,124,.15);
-  border: 1px solid #ddd;
   border: 1px solid rgba(86,61,124,.2);
 }
 .character:hover {
@@ -129,18 +128,13 @@ body {
   text-align: center;
 }
 
-#character-modal-firstrow {
-  margin-bottom: 0px;
-}
-
-#character-modal-secondrow {
+#character-modal-firstrow, #character-modal-secondrow {
   margin-bottom: 0px;
 }
 
 #svgcol {
     margin: 0 auto;
     width: 50%;
-    height: 230px;
 }
 
 #character-modal-backing-hex {
@@ -179,4 +173,44 @@ body {
   font-size: 12pt;
   margin-top:15px;
   width: 95%;
+}
+
+.character-playable-0 {
+  background-color: rgba(75, 192, 192, .25);
+  border: 1px solid rgba(75, 192, 192, .35);
+}
+
+.character-playable-0:hover {
+  background-color: rgba(75, 192, 192, .5);
+}
+
+.character-playable-1 {
+  background-color: rgba(255, 99, 132, .25);
+  border: 1px solid rgba(255, 99, 132, .35);
+}
+
+.character-playable-1:hover {
+  background-color: rgba(255, 99, 132, .5);
+}
+
+.character-playable-2 {
+  background-color: rgba(54, 162, 235, .25);
+  border: 1px solid rgba(54, 162, 235, .35);
+}
+
+.character-playable-2:hover {
+  background-color: rgba(54, 162, 235, .5);
+}
+
+.character-playable-3 {
+  background-color: rgba(255, 205, 86, .25);
+  border: 1px solid rgba(255, 205, 86, .35);
+}
+
+.character-playable-3:hover {
+  background-color: rgba(255, 205, 86, .5);
+}
+
+.close {
+  font-size: 42px;
 }
